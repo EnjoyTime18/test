@@ -54,8 +54,10 @@ Name|GitHub Address|
 <br><br>
 
 ## :clipboard: 게시글 CRUD – 조회, 글 상세보기 및 페이징 기능 <a name="clipboard-게시글_조회_상세보기_페이징"></a>
+#### (1) 게시글 리스트
 ![게시판 리스트](https://github.com/EnjoyTime18/test/assets/122413012/eed5c256-866b-4e26-b2d2-a177ebf848b3)
 ***
+#### (2) 게시글 상세보기
 ![게시글 상세보기](https://github.com/EnjoyTime18/test/assets/122413012/ef25b512-e953-433f-a46c-b4556eafe295)
 ***
 * 게시글 리스트를 페이지별로 나누어서 보여주기 위해 한 페이지의 보여줄 게시물의 갯수를 10개로 조정하고 오름차순으로 정렬 및 페이지 이동 기능을 JPA Pageable를 활용하여 구현했습니다. 
@@ -66,10 +68,13 @@ Name|GitHub Address|
 <br><br>
 
 ## :clipboard: 게시글 CRUD – 등록, 수정, 삭제 기능 <a name="clipboard-게시글_등록_수정_삭제"></a>
+#### (1) 게시글 등록
 ![게시글 등록](https://github.com/EnjoyTime18/test/assets/122413012/917df26b-3b16-4f29-9308-f8b405ebc9fe)
 ***
+#### (2) 게시글 수정
 ![게시글 수정](https://github.com/EnjoyTime18/test/assets/122413012/0d2d71bb-5099-490d-a490-caa6346c042d)
 ***
+#### (3) 게시글 비밀번호 입력 (비밀번호 불일치 시 기준 사진)
 ![게시글 비밀번호 ](https://github.com/EnjoyTime18/test/assets/122413012/94374e0c-f02b-468d-8ae6-ab2c3eb11cf1)
 ***
 * 회원가입/로그인 기능은 익명 게시판이기 때문에 비밀번호 기능으로 대체하였습니다. 비밀번호는 게시글 CUD(등록, 수정, 삭제)시 사용됩니다.
@@ -79,8 +84,10 @@ Name|GitHub Address|
 <br><br>
 
 ## :mag_right: 게시글 CRUD – 복합 검색 기능 <a name="clipboard-게시글_복합_검색"></a>
+#### (1) 게시글 복합 검색 결과
 ![게시글 복합 검색](https://github.com/EnjoyTime18/test/assets/122413012/c449e365-f597-473f-89b5-6f3440ede04d)
 ***
+#### (1) 게시글 복합 검색 결과2
 ![게시글 복합 검색2](https://github.com/EnjoyTime18/test/assets/122413012/cdaa2ede-3dc8-43bc-84d9-44ae54009180)
 ***
 * 메인 페이지에서 여러 조건의 게시글 복합 검색을 할 수 있도록 JPA Specification을 활용하여 복합 검색 처리를 구현했습니다. <br><br>
@@ -89,8 +96,10 @@ Name|GitHub Address|
 <br><br>
 
 ## :clipboard: 댓글 CRUD – 조회, 등록 기능 <a name="clipboard-댓글_조회_등록"></a>
+#### (1) 댓글 등록
 ![댓글 등록](https://github.com/EnjoyTime18/test/assets/122413012/ca1599bd-bf05-4913-837a-46b71c17e9a7)
 ***
+#### (1) 댓글 목록
 ![댓글 목록](https://github.com/EnjoyTime18/test/assets/122413012/3725e60f-b7de-42cd-8e09-2865a8f02d9f)
 ***
 * 게시글 상세보기 페이지에서 댓글을 등록 및 조회가 가능하며 모두 Axios 비동기 라이브러리 통신으로 구현하였습니다. 
@@ -100,10 +109,12 @@ Name|GitHub Address|
 <br><br>
 
 ## :clipboard: 댓글 CRUD – 수정, 삭제 기능 <a name="clipboard-댓글_수정_삭제"></a>
+#### (1) 댓글 수정
 ![댓글 수정](https://github.com/EnjoyTime18/test/assets/122413012/6e882ba6-0a85-4ca7-9f22-d4999dada609)
 ***
 ![댓글 수정2](https://github.com/EnjoyTime18/test/assets/122413012/a0f7f35b-82c2-46f8-995f-b79f8689343b)
 ***
+#### (2) 댓글 삭제 (비밀번호 불일치 시 기준 사진)
 ![댓글 비밀번호](https://github.com/EnjoyTime18/test/assets/122413012/929aa846-2d63-4250-8711-7e4f107b8bf1)
 ***
 ![댓글 삭제](https://github.com/EnjoyTime18/test/assets/122413012/c96db2a6-74ef-46b1-a680-1519559f7777)
