@@ -40,12 +40,8 @@ Name|GitHub Address|
 <br/><br/>
 
 ## :books: ERD
-![ERD](https://user-images.githubusercontent.com/87034370/230785760-1096ddb6-af06-4308-95b2-3ae6d3bc9b70.png)
+![ERD](https://github.com/EnjoyTime18/test/assets/122413012/6027fef4-59d3-448a-b2c8-e3bea0b99ad6)
 <br/><br/>
-
-## :railway_track: 순서도
-![순서도](https://user-images.githubusercontent.com/87034370/230532625-b0f0fa81-fd59-4f07-a861-4420c0771654.png)
-<br><br>
 
 # :gear: 주요 기능 
 * [:world_map: 호텔검색_지도](#world_map-호텔검색_지도)<br>
