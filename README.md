@@ -89,7 +89,10 @@ Name|GitHub Address|
 <br><br>
 
 ## :clipboard: 댓글 CRUD – 조회, 등록 기능 <a name="clipboard-댓글_조회_등록"></a>
-![관리자_차트](https://user-images.githubusercontent.com/87034370/229581658-75e2c170-8834-4263-a08f-bc448d60ec01.gif)<br><br>
+![댓글 등록](https://github.com/EnjoyTime18/test/assets/122413012/ca1599bd-bf05-4913-837a-46b71c17e9a7)
+***
+![댓글 목록](https://github.com/EnjoyTime18/test/assets/122413012/3725e60f-b7de-42cd-8e09-2865a8f02d9f)
+***
 * 게시글 상세보기 페이지에서 댓글을 등록 및 조회가 가능하며 모두 Axios 비동기 라이브러리 통신으로 구현하였습니다. 
 * 댓글 CRUD 관련 개발 요소 모두 Spring Data JPA를 활용하여 구현했습니다. <br><br>
 
@@ -97,8 +100,10 @@ Name|GitHub Address|
 <br><br>
 
 ## :clipboard: 댓글 CRUD – 수정, 삭제 기능 <a name="clipboard-댓글_수정_삭제"></a>
-<img src="https://user-images.githubusercontent.com/116073413/230073771-e58cd554-d425-4c7a-9e72-68cdf53855d1.gif" width="100%" height="90%" title="px(픽셀) 크기 설정" >
-
+![댓글 수정](https://github.com/EnjoyTime18/test/assets/122413012/90cf6089-c138-43b6-8483-7d41074f0b5f)
+***
+![댓글 비밀번호](https://github.com/EnjoyTime18/test/assets/122413012/929aa846-2d63-4250-8711-7e4f107b8bf1)
+***
 * 게시글 상세보기 페이지에서 댓글을 수정 및 삭제 이 가능하며 모두 동기 방식으로 구현했습니다.
 * 현재 수정, 삭제 기능이 페이지 이동의 동기 방식으로 개발을 하였지만 향후 댓글 조회, 등록 기능에 맞추어 현 동기 방식 -> Axios 비동기 라이브러리 통신으로 모달창을 띄우며 개발 보완을 할 생각입니다. <br><br>
 
