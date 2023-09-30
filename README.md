@@ -83,6 +83,10 @@ Name|GitHub Address|
 ***
 ![게시글 복합 검색2](https://github.com/EnjoyTime18/test/assets/122413012/16c153ee-7f71-41ca-a591-4a2a0084bd4e)
 ***
+![게시글 복합 검색](https://github.com/EnjoyTime18/test/assets/122413012/c449e365-f597-473f-89b5-6f3440ede04d)
+***
+![게시글 복합 검색2](https://github.com/EnjoyTime18/test/assets/122413012/cdaa2ede-3dc8-43bc-84d9-44ae54009180)
+***
 * 메인 페이지에서 여러 조건의 게시글 복합 검색을 할 수 있도록 JPA Specification을 활용하여 복합 검색 처리를 구현했습니다. <br><br>
 
 [:gear: 주요 기능](#gear-주요-기능)
