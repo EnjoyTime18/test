@@ -79,8 +79,10 @@ Name|GitHub Address|
 <br><br>
 
 ## :mag_right: 게시글 CRUD – 복합 검색 기능 <a name="clipboard-게시글_복합_검색"></a>
-<img src="https://user-images.githubusercontent.com/116073413/230076109-5a7a08f2-5836-470c-8ae6-90245915a893.gif" width="100%" height="90%" title="px(픽셀) 크기 설정" >
-
+![게시글 복합 검색](https://github.com/EnjoyTime18/test/assets/122413012/b705d8ca-d038-4d37-b36b-af7e55d8e089)
+***
+![게시글 복합 검색2](https://github.com/EnjoyTime18/test/assets/122413012/16c153ee-7f71-41ca-a591-4a2a0084bd4e)
+***
 * 메인 페이지에서 여러 조건의 게시글 복합 검색을 할 수 있도록 JPA Specification을 활용하여 복합 검색 처리를 구현했습니다. <br><br>
 
 [:gear: 주요 기능](#gear-주요-기능)
