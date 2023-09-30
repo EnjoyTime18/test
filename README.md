@@ -55,57 +55,43 @@ Name|GitHub Address|
 
 ## :clipboard: 게시글 CRUD – 조회, 글 상세보기 및 페이징 기능 <a name="clipboard-게시글_조회_상세보기_페이징"></a>
 ![검색_지도](https://user-images.githubusercontent.com/87034370/229581639-96dc01db-0aef-4355-9f1f-355e09aa2c56.gif)<br><br>
-* 메인 페이지의 이미지 카테고리(지역)을 조건으로 해당 지역의 호텔을 마커로 표시해줍니다.<br><br>
-* 마커를 클릭하면 호텔 정보 창이 출력되며, 바로가기를 클릭 시 상세페이지로 이동합니다.<br><br>
+* 게시글 리스트를 페이지별로 나누어서 보여주기 위해 한 페이지의 보여줄 게시물의 갯수를 10개로 조정하고 오름차순으로 정렬 및 페이지 이동 기능을 JPA Pageable를 활용하여 구현했습니다. 
+* 게시글의 제목 링크를 걸어 클릭 시 해당 게시글을 상세하게 정보 확인 및 수정, 삭제, 댓글 기능을 사용할 수 있습니다. 
+* 게시글 CRUD 관련 개발 요소 모두 Spring Data JPA를 활용하여 구현했습니다. <br><br>
+
 [:gear: 주요 기능](#gear-주요-기능)
 <br><br>
 
 ## :clipboard: 게시글 CRUD – 등록, 수정, 삭제 기능 <a name="clipboard-게시글_등록_수정_삭제"></a>
 ![검색](https://user-images.githubusercontent.com/122413012/230009947-5d286592-7ab8-497e-9b5e-38a24ec94c4e.gif)
-<br/><br/>
-![재검색](https://user-images.githubusercontent.com/122413012/230009921-7103cf78-3ed3-4d06-9fcf-72ee616f0e8d.gif)
-<br>
+* 회원가입/로그인 기능은 익명 게시판이기 때문에 비밀번호 기능으로 대체하였습니다. 비밀번호는 게시글 CUD(등록, 수정, 삭제)시 사용됩니다.
+* 극단적인 현재의 익명 게시판은 보안에 매우 취약하다 생각하여 향후 Spring Security를 학습해 현 비밀번호 기능 -> 회원가입/로그인 기능으로 변경하여 보안성을 늘려 보완할 생각입니다. <br><br>
 
-* 메인 페이지의 호텔 검색 조건(지역, 체크인/체크아웃, 인원(객실)수, 등급)을 설정하고 검색 버튼을 누르면 검색조건에 해당하는 호텔 정보 리스트가 출력됩니다. 
-* 호텔 이름 클릭 시 해당 호텔 세부정보 페이지로 이동합니다. 
-* 호텔 예약 재검색 기능으로 메인페이지에서 되돌아가 다시 호텔을 검색하지 않고 이미 호텔이 검색된 목록 페이지에서 동기 방식으로 재검색하여 검색조건에 맞는 호텔목록을 보여줍니다.
-<br><br>
 [:gear: 주요 기능](#gear-주요-기능)
-<br/><br/>
+<br><br>
 
 ## :mag_right: 게시글 CRUD – 복합 검색 기능 <a name="clipboard-게시글_복합_검색"></a>
 <img src="https://user-images.githubusercontent.com/116073413/230076109-5a7a08f2-5836-470c-8ae6-90245915a893.gif" width="100%" height="90%" title="px(픽셀) 크기 설정" >
-<br>
+* 메인 페이지에서 여러 조건의 게시글 복합 검색을 할 수 있도록 JPA Specification을 활용하여 복합 검색 처리를 구현했습니다. <br><br>
 
-* 로그인은 Spring Security에서 관리됩니다.
-* 로그인은 두가지의 방법이 있으며 첫번째는 일반적인 Spring Security 폼 인증, 두번째는 OAuth2 의 소셜 로그인 인증입니다.
-* 최초로 소셜 로그인을 한 사용자는 ‘소셜 등급‘ 의 권한을 부여 받으며 추후에 이메일 인증을 해야 사이트의 모든 기능을 사용할 수 있습니다. 
-<br><br>
 [:gear: 주요 기능](#gear-주요-기능)
-<br/><br/>
+<br><br>
 
 ## :clipboard: 댓글 CRUD – 조회, 등록 기능 <a name="clipboard-댓글_조회_등록"></a>
 ![관리자_차트](https://user-images.githubusercontent.com/87034370/229581658-75e2c170-8834-4263-a08f-bc448d60ec01.gif)<br><br>
-* 원형 차트는 지역별 총 매출, 열 차트는 가장 많이 찜을 받은 선호도 상위 호텔 5개를 조회 할 수 있습니다.
-<br><br>
+* 게시글 상세보기 페이지에서 댓글을 등록 및 조회가 가능하며 모두 Axios 비동기 라이브러리 통신으로 구현하였습니다. 
+* 댓글 CRUD 관련 개발 요소 모두 Spring Data JPA를 활용하여 구현했습니다. <br><br>
+
 [:gear: 주요 기능](#gear-주요-기능)
 <br><br>
 
 ## :clipboard: 댓글 CRUD – 수정, 삭제 기능 <a name="clipboard-댓글_수정_삭제"></a>
 <img src="https://user-images.githubusercontent.com/116073413/230073771-e58cd554-d425-4c7a-9e72-68cdf53855d1.gif" width="100%" height="90%" title="px(픽셀) 크기 설정" >
+* 게시글 상세보기 페이지에서 댓글을 수정 및 삭제 이 가능하며 모두 동기 방식으로 구현했습니다.
+* 현재 수정, 삭제 기능이 페이지 이동의 동기 방식으로 개발을 하였지만 향후 댓글 조회, 등록 기능에 맞추어 현 동기 방식 -> Axios 비동기 라이브러리 통신으로 모달창을 띄우며 개발 보완을 할 생각입니다. <br><br>
 
-<br>
-
-* 회원가입시 ‘아이디’, ‘비밀번호‘, ‘이름‘, ‘이메일’ 이 요구됩니다.
-* ‘아이디‘ 는 ‘중복확인’기능을 사용하여 사용 가능한 아이디 인지 확인합니다. 
-* ‘비밀번호‘는 한번 더 입력하여 오타나 잘못된 입력을 사전에 방지하고, 입력한 비밀번호가 일치하지 않으면 경고 문구가 출력됩니다.
-* 위의 모든 조건을 만족하기 전까지는 ‘회원가입‘ 버튼은 비활성화 상태로 유지됩니다. 
-<img src="https://user-images.githubusercontent.com/116073413/230077557-ec1694e3-2d97-44c3-afbe-f22643e5a32d.jpg">
-
-* 회원가입시 입력한 비밀번호는 암호화 되어 저장되기 때문에 비밀번호 유출 등의 보안 문제를 방지할 수 있습니다. 
-<br><br>
 [:gear: 주요 기능](#gear-주요-기능)
-<br/><br/>
+<br><br>
 
 ## :face_with_head_bandage: Trouble Shooting
 :page_facing_up: 메인 페이지<br><br>
@@ -155,7 +141,6 @@ Name|GitHub Address|
  
  <br><br>:moneybag: 결제<br><br>
  > :rotating_light: 호텔 상세보기 페이지단에 방 리스트 탭 및 결제 페이지에서 1박 가격 값이 천(1000) 단위마다 콤마가 적용 안되서 숫자 데이터 가독성 문제점 발생 
- > * Thymeleaf 문법 함수 #numbers.formatInteger 적용해서 문제점 해결
+ > * Thymeleaf 문법 함수 #numbers.formatInteger 적용해서 문제점 해결 <br><br>
 
-<br><br>
 [:gear: 주요 기능](#gear-주요-기능)
