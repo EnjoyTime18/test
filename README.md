@@ -79,10 +79,6 @@ Name|GitHub Address|
 <br><br>
 
 ## :mag_right: 게시글 CRUD – 복합 검색 기능 <a name="clipboard-게시글_복합_검색"></a>
-![게시글 복합 검색](https://github.com/EnjoyTime18/test/assets/122413012/b705d8ca-d038-4d37-b36b-af7e55d8e089)
-***
-![게시글 복합 검색2](https://github.com/EnjoyTime18/test/assets/122413012/16c153ee-7f71-41ca-a591-4a2a0084bd4e)
-***
 ![게시글 복합 검색](https://github.com/EnjoyTime18/test/assets/122413012/c449e365-f597-473f-89b5-6f3440ede04d)
 ***
 ![게시글 복합 검색2](https://github.com/EnjoyTime18/test/assets/122413012/cdaa2ede-3dc8-43bc-84d9-44ae54009180)
