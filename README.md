@@ -100,7 +100,11 @@ Name|GitHub Address|
 <br><br>
 
 ## :clipboard: 댓글 CRUD – 수정, 삭제 기능 <a name="clipboard-댓글_수정_삭제"></a>
-![댓글 수정](https://github.com/EnjoyTime18/test/assets/122413012/90cf6089-c138-43b6-8483-7d41074f0b5f)
+![댓글 수정](https://github.com/EnjoyTime18/test/assets/122413012/6e882ba6-0a85-4ca7-9f22-d4999dada609)
+***
+![댓글 수정2](https://github.com/EnjoyTime18/test/assets/122413012/a0f7f35b-82c2-46f8-995f-b79f8689343b)
+***
+![댓글 삭제](https://github.com/EnjoyTime18/test/assets/122413012/c96db2a6-74ef-46b1-a680-1519559f7777)
 ***
 ![댓글 비밀번호](https://github.com/EnjoyTime18/test/assets/122413012/929aa846-2d63-4250-8711-7e4f107b8bf1)
 ***
