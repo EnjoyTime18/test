@@ -44,28 +44,22 @@ Name|GitHub Address|
 <br/><br/>
 
 # :gear: 주요 기능 
-* [:world_map: 호텔검색_지도](#world_map-호텔검색_지도)<br>
-* [:mag_right: 호텔검색_조건 검색](#mag_right-검색방법)
-* [:necktie: 관리자_통계차트](#necktie-관리자_통계차트)
-* [:memo: 회원가입](#memo-회원가입)
-* [:computer: 로그인/소셜 로그인](#computer-로그인_소셜-로그인)
-* [:shopping_cart: 찜 하기](#shopping_cart-찜-하기)
-* [:moneybag: 결제](#moneybag-결제)
-* [:file_cabinet: 질문 게시판](#file_cabinet-질문-게시판)
-* [:pencil2: 리뷰쓰기](#pencil2-리뷰쓰기)
-* [:memo: 이용약관](#memo-이용약관)
-* [:clipboard: 자유게시판](#clipboard-자유게시판)
+* [:clipboard: 게시글 CRUD – 조회, 글 상세보기 및 페이징 기능](#clipboard-게시글_조회_상세보기_페이징)<br>
+* [:clipboard: 게시글 CRUD – 등록, 수정, 삭제 기능](#clipboard-게시글_등록_수정_삭제)
+* [:mag_right: 게시글 복합 검색 기능](#clipboard-게시글_복합_검색)
+* [:clipboard: 댓글 CRUD – 조회, 등록 기능](#clipboard-댓글_조회_등록)
+* [:clipboard: 댓글 CRUD – 수정, 삭제 기능](#clipboard-댓글_수정_삭제)
 * [:face_with_head_bandage: Trouble Shooting](#face_with_head_bandage-trouble-shooting)
 <br><br>
 
-## :world_map: 호텔검색_지도
+## :clipboard: 게시글 CRUD – 조회, 글 상세보기 및 페이징 기능 <a name="clipboard-게시글_조회_상세보기_페이징"></a>
 ![검색_지도](https://user-images.githubusercontent.com/87034370/229581639-96dc01db-0aef-4355-9f1f-355e09aa2c56.gif)<br><br>
 * 메인 페이지의 이미지 카테고리(지역)을 조건으로 해당 지역의 호텔을 마커로 표시해줍니다.<br><br>
 * 마커를 클릭하면 호텔 정보 창이 출력되며, 바로가기를 클릭 시 상세페이지로 이동합니다.<br><br>
 [:gear: 주요 기능](#gear-주요-기능)
 <br><br>
 
-## <a name="mag_right-검색방법"></a>:mag_right: 호텔검색_조건 검색
+## :clipboard: 게시글 CRUD – 등록, 수정, 삭제 기능 <a name="clipboard-게시글_등록_수정_삭제"></a>
 ![검색](https://user-images.githubusercontent.com/122413012/230009947-5d286592-7ab8-497e-9b5e-38a24ec94c4e.gif)
 <br/><br/>
 ![재검색](https://user-images.githubusercontent.com/122413012/230009921-7103cf78-3ed3-4d06-9fcf-72ee616f0e8d.gif)
@@ -78,15 +72,25 @@ Name|GitHub Address|
 [:gear: 주요 기능](#gear-주요-기능)
 <br/><br/>
 
+## :mag_right: 게시글 복합 검색 기능 <a name="clipboard-게시글_복합_검색"></a>
+<img src="https://user-images.githubusercontent.com/116073413/230076109-5a7a08f2-5836-470c-8ae6-90245915a893.gif" width="100%" height="90%" title="px(픽셀) 크기 설정" >
+<br>
 
-## :necktie: 관리자_통계차트
+* 로그인은 Spring Security에서 관리됩니다.
+* 로그인은 두가지의 방법이 있으며 첫번째는 일반적인 Spring Security 폼 인증, 두번째는 OAuth2 의 소셜 로그인 인증입니다.
+* 최초로 소셜 로그인을 한 사용자는 ‘소셜 등급‘ 의 권한을 부여 받으며 추후에 이메일 인증을 해야 사이트의 모든 기능을 사용할 수 있습니다. 
+<br><br>
+[:gear: 주요 기능](#gear-주요-기능)
+<br/><br/>
+
+## :clipboard: 댓글 CRUD – 조회, 등록 기능 <a name="clipboard-댓글_조회_등록"></a>
 ![관리자_차트](https://user-images.githubusercontent.com/87034370/229581658-75e2c170-8834-4263-a08f-bc448d60ec01.gif)<br><br>
 * 원형 차트는 지역별 총 매출, 열 차트는 가장 많이 찜을 받은 선호도 상위 호텔 5개를 조회 할 수 있습니다.
 <br><br>
 [:gear: 주요 기능](#gear-주요-기능)
 <br><br>
 
-## :memo: 회원가입
+## :clipboard: 댓글 CRUD – 수정, 삭제 기능 <a name="clipboard-댓글_수정_삭제"></a>
 <img src="https://user-images.githubusercontent.com/116073413/230073771-e58cd554-d425-4c7a-9e72-68cdf53855d1.gif" width="100%" height="90%" title="px(픽셀) 크기 설정" >
 
 <br>
@@ -101,82 +105,6 @@ Name|GitHub Address|
 <br><br>
 [:gear: 주요 기능](#gear-주요-기능)
 <br/><br/>
-
-## :computer: 로그인_소셜 로그인
-<img src="https://user-images.githubusercontent.com/116073413/230076109-5a7a08f2-5836-470c-8ae6-90245915a893.gif" width="100%" height="90%" title="px(픽셀) 크기 설정" >
-<br>
-
-* 로그인은 Spring Security에서 관리됩니다.
-* 로그인은 두가지의 방법이 있으며 첫번째는 일반적인 Spring Security 폼 인증, 두번째는 OAuth2 의 소셜 로그인 인증입니다.
-* 최초로 소셜 로그인을 한 사용자는 ‘소셜 등급‘ 의 권한을 부여 받으며 추후에 이메일 인증을 해야 사이트의 모든 기능을 사용할 수 있습니다. 
-<br><br>
-[:gear: 주요 기능](#gear-주요-기능)
-<br/><br/>
-
-## :shopping_cart: 찜 하기
-<img src="https://user-images.githubusercontent.com/116073413/230077975-ec4b8b8c-d3f9-4f71-b5d6-64d27bfcb1e4.gif" width="100%" height="90%" title="px(픽셀) 크기 설정" >
-
-<br>
-
-* 사용자는 마음에 드는 호텔을 '찜하기' 기능을 통해 즐겨찾기에 추가할수 있습니다. 
-* 하트의 색깔이 채워져 있으면 이미 찜 목록에 추가된 상태이고, 한번 더 눌러 찜 목록에서 삭제할 수 있습니다.
-* '찜 목록' 에서 직접 삭제할 수도 있습니다.
-<br><br>
-[:gear: 주요 기능](#gear-주요-기능)
-<br/><br/>
-
-## :moneybag: 결제
-![결제](https://user-images.githubusercontent.com/122413012/230001516-9fb6f90a-57c6-4649-999a-ad2dc88b85b2.gif)
-<br>
-* 호텔 상세 페이지에서 방 리스트 탭에 최종 예약 날짜 선택 후 예약하기 버튼 클릭 시 결제 페이지로 이동합니다.
-* 결제하기 버튼 클릭 시 KG이니시스 결제 API 사용하여 실제처럼 결제가 가능합니다. 사용자는 상세 페이지에서 입력받은 데이터를 토대로 결제 페이지에서 자신의 정보를 확인하고, 결제를 완  료할 수 있게 됩니다. 
-* 결제 완료 시 마이페이지로 즉시 이동하여 구매내역 확인이 가능하고 취소 시 취소 알림창을 띄워 페이지 이동은 하지 않고 다시 결제 가능 및 홈으로 버튼 클릭 시 메인페이지로 이동합니다. 
-<br><br>
-[:gear: 주요 기능](#gear-주요-기능)
-<br/><br/>
-
-## :file_cabinet: 질문 게시판
-<img src="https://user-images.githubusercontent.com/116073413/230085088-bff10365-aa8f-4199-a448-9d734ce70ac3.gif" width="100%" height="90%" title="px(픽셀) 크기 설정" >
-<br>
-
-* 질문 게시판을 사용하여 관리자는 사용자와 소통하고 사용자의 다양한 의견을 수렴하여 편의를 제공합니다.
-* 글 제목을 클릭하여 내용을 열람할 수 있고, 로그인을 한 유저만 게시판에 글을 작성할 수 있습니다.
-
-<img src="https://user-images.githubusercontent.com/116073413/230085527-1dfee8e8-f4dd-4cd7-b52d-efd0f287db74.jpg" width="50%" height="40%">
-
-* 관리자는 사용자의 글에 답변과 삭제할 수 있는 권한이 있습니다. 
-<br><br>
-[:gear: 주요 기능](#gear-주요-기능)
-<br/><br/>
-
-## :pencil2: 리뷰쓰기
-![review](https://user-images.githubusercontent.com/117890994/230530249-3b9011a2-8163-4fc3-af43-87cb114ecc34.gif)
-<br>
-
-* 머물렀던 호텔에 대해서 리뷰를 쓸 수 있고, 한 번 리뷰를 작성하면 중복해서 작성할 수 없습니다.
-* 내가 쓴 리뷰를 다른 유저들이 호텔을 선택할 때, 디테일 페이지에서 확인할 수 있습니다. 
-<br><br>
-[:gear: 주요 기능](#gear-주요-기능)
-<br><br>
-
-## :memo: 이용약관
-![Terms](https://user-images.githubusercontent.com/124442373/230892456-6d98da76-b4c9-46a8-8bd4-576ffbb41a01.gif)
-<br>
-
-* 상단 FAQ 페이지에서 tteonago 이용약관을 확인 하실 수 있습니다.
-<br><br>
-[:gear: 주요 기능](#gear-주요-기능)
-<br><br>
-
-## :clipboard: 자유게시판
-![FreeBoard](https://user-images.githubusercontent.com/124442373/230892618-199fba12-e977-47af-891f-7878452daf0d.gif)
-<br>
-
-* 비회원은 게시글에 대한 조회가 가능하지만 회원으로 접근하게 되면 게시글을 작성할 수 있는 글쓰기 버튼이 활성화가 되며 작성자는 수정 및 삭제가 가능합니다.
-* 검색 기능은 검색하고자 하는 전체, 제목, 내용 선택후 keywoad를 통해 원하는 게시글 조회가 가능합니다.
-<br><br>
-[:gear: 주요 기능](#gear-주요-기능)
-<br><br>
 
 ## :face_with_head_bandage: Trouble Shooting
 :page_facing_up: 메인 페이지<br><br>
