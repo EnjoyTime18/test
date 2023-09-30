@@ -104,9 +104,9 @@ Name|GitHub Address|
 ***
 ![댓글 수정2](https://github.com/EnjoyTime18/test/assets/122413012/a0f7f35b-82c2-46f8-995f-b79f8689343b)
 ***
-![댓글 삭제](https://github.com/EnjoyTime18/test/assets/122413012/c96db2a6-74ef-46b1-a680-1519559f7777)
-***
 ![댓글 비밀번호](https://github.com/EnjoyTime18/test/assets/122413012/929aa846-2d63-4250-8711-7e4f107b8bf1)
+***
+![댓글 삭제](https://github.com/EnjoyTime18/test/assets/122413012/c96db2a6-74ef-46b1-a680-1519559f7777)
 ***
 * 게시글 상세보기 페이지에서 댓글을 수정 및 삭제 이 가능하며 모두 동기 방식으로 구현했습니다.
 * 현재 수정, 삭제 기능이 페이지 이동의 동기 방식으로 개발을 하였지만 향후 댓글 조회, 등록 기능에 맞추어 현 동기 방식 -> Axios 비동기 라이브러리 통신으로 모달창을 띄우며 개발 보완을 할 생각입니다. <br><br>
