@@ -46,7 +46,7 @@ Name|GitHub Address|
 # :gear: 주요 기능 
 * [:clipboard: 게시글 CRUD – 조회, 글 상세보기 및 페이징 기능](#clipboard-게시글_조회_상세보기_페이징)<br>
 * [:clipboard: 게시글 CRUD – 등록, 수정, 삭제 기능](#clipboard-게시글_등록_수정_삭제)
-* [:mag_right: 게시글 복합 검색 기능](#clipboard-게시글_복합_검색)
+* [:mag_right: 게시글 CRUD – 복합 검색 기능](#clipboard-게시글_복합_검색)
 * [:clipboard: 댓글 CRUD – 조회, 등록 기능](#clipboard-댓글_조회_등록)
 * [:clipboard: 댓글 CRUD – 수정, 삭제 기능](#clipboard-댓글_수정_삭제)
 * [:face_with_head_bandage: Trouble Shooting](#face_with_head_bandage-trouble-shooting)
@@ -72,7 +72,7 @@ Name|GitHub Address|
 [:gear: 주요 기능](#gear-주요-기능)
 <br/><br/>
 
-## :mag_right: 게시글 복합 검색 기능 <a name="clipboard-게시글_복합_검색"></a>
+## :mag_right: 게시글 CRUD – 복합 검색 기능 <a name="clipboard-게시글_복합_검색"></a>
 <img src="https://user-images.githubusercontent.com/116073413/230076109-5a7a08f2-5836-470c-8ae6-90245915a893.gif" width="100%" height="90%" title="px(픽셀) 크기 설정" >
 <br>
 
