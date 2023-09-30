@@ -72,6 +72,7 @@ Name|GitHub Address|
 
 ## :mag_right: 게시글 CRUD – 복합 검색 기능 <a name="clipboard-게시글_복합_검색"></a>
 <img src="https://user-images.githubusercontent.com/116073413/230076109-5a7a08f2-5836-470c-8ae6-90245915a893.gif" width="100%" height="90%" title="px(픽셀) 크기 설정" >
+
 * 메인 페이지에서 여러 조건의 게시글 복합 검색을 할 수 있도록 JPA Specification을 활용하여 복합 검색 처리를 구현했습니다. <br><br>
 
 [:gear: 주요 기능](#gear-주요-기능)
@@ -87,6 +88,7 @@ Name|GitHub Address|
 
 ## :clipboard: 댓글 CRUD – 수정, 삭제 기능 <a name="clipboard-댓글_수정_삭제"></a>
 <img src="https://user-images.githubusercontent.com/116073413/230073771-e58cd554-d425-4c7a-9e72-68cdf53855d1.gif" width="100%" height="90%" title="px(픽셀) 크기 설정" >
+
 * 게시글 상세보기 페이지에서 댓글을 수정 및 삭제 이 가능하며 모두 동기 방식으로 구현했습니다.
 * 현재 수정, 삭제 기능이 페이지 이동의 동기 방식으로 개발을 하였지만 향후 댓글 조회, 등록 기능에 맞추어 현 동기 방식 -> Axios 비동기 라이브러리 통신으로 모달창을 띄우며 개발 보완을 할 생각입니다. <br><br>
 
