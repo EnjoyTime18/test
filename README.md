@@ -66,7 +66,12 @@ Name|GitHub Address|
 <br><br>
 
 ## :clipboard: 게시글 CRUD – 등록, 수정, 삭제 기능 <a name="clipboard-게시글_등록_수정_삭제"></a>
-![검색](https://user-images.githubusercontent.com/122413012/230009947-5d286592-7ab8-497e-9b5e-38a24ec94c4e.gif)
+![게시글 등록](https://github.com/EnjoyTime18/test/assets/122413012/917df26b-3b16-4f29-9308-f8b405ebc9fe)
+***
+![게시글 수정](https://github.com/EnjoyTime18/test/assets/122413012/0d2d71bb-5099-490d-a490-caa6346c042d)
+***
+![게시글 비밀번호 ](https://github.com/EnjoyTime18/test/assets/122413012/94374e0c-f02b-468d-8ae6-ab2c3eb11cf1)
+***
 * 회원가입/로그인 기능은 익명 게시판이기 때문에 비밀번호 기능으로 대체하였습니다. 비밀번호는 게시글 CUD(등록, 수정, 삭제)시 사용됩니다.
 * 극단적인 현재의 익명 게시판은 보안에 매우 취약하다 생각하여 향후 Spring Security를 학습해 현 비밀번호 기능에서 회원가입/로그인 기능으로 변경하여 보안성을 늘려 보완할 생각입니다. <br><br>
 
