@@ -54,7 +54,8 @@ Name|GitHub Address|
 <br><br>
 
 ## :clipboard: 게시글 CRUD – 조회, 글 상세보기 및 페이징 기능 <a name="clipboard-게시글_조회_상세보기_페이징"></a>
-![검색_지도](https://user-images.githubusercontent.com/87034370/229581639-96dc01db-0aef-4355-9f1f-355e09aa2c56.gif)<br><br>
+![게시판 리스트](https://github.com/EnjoyTime18/test/assets/122413012/eed5c256-866b-4e26-b2d2-a177ebf848b3)<br><br>
+![게시글 상세보기](https://github.com/EnjoyTime18/test/assets/122413012/ef25b512-e953-433f-a46c-b4556eafe295)<br><br>
 * 게시글 리스트를 페이지별로 나누어서 보여주기 위해 한 페이지의 보여줄 게시물의 갯수를 10개로 조정하고 오름차순으로 정렬 및 페이지 이동 기능을 JPA Pageable를 활용하여 구현했습니다. 
 * 게시글의 제목 링크를 걸어 클릭 시 해당 게시글을 상세하게 정보 확인 및 수정, 삭제, 댓글 기능을 사용할 수 있습니다. 
 * 게시글 CRUD 관련 개발 요소 모두 Spring Data JPA를 활용하여 구현했습니다. <br><br>
