@@ -135,7 +135,7 @@ Name|GitHub Address|
 
 > :rotating_light: 댓글 등록 시 작성일 null 표시 문제점 발생 <br>
 >  Entity 클래스의 builder 메소드에서 시간 설정이 수동으로 이루어지고 있었음. 이로 인해, @CreationTimestamp 어노테이션이 제대로 작동하지 않아 생성 시간이 null로 처리되고 있었음.
-> * Entity 클래스에서 시간 필드 설정 제거: Entity 클래스의 builder 메소드에서 시간 필드에 대한 설정을 제거하여, Hibernate가 @CreationTimestamp 어노테이션을 통해 시간을 자동으로 관리할 수 있도록 함.
+> * Entity 클래스에서 시간 필드 설정 제거: Entity 클래스의 builder 메소드에서 시간 필드에 대한 설정을 제거하여, Hibernate가 @CreationTimestamp   어노테이션을 통해 시간을 자동으로 관리할 수 있도록 함.
 > * DTO에서 시간 필드 세팅: Entity에서 DTO로 데이터 변환 시, Entity에 저장된 시간 필드를 DTO의 시간 필드에 세팅함. 이로써, 클라이언트 측으로 정확한 시간 정보가 전달됨.
 > * DTO 는 Entity 로부터 세팅 된거 가져 오는 용도 : Entity는 시간 값 1번만 세팅 해야 되기 떄문임. @CreationTimestamp 와 @UpdateTimestamp의 값들은 1번만 세팅되고 1번 만 실행 됨. 그래서 builder에서 시간 값을 또 세팅 시 null값 으로 세팅 됨.
 
