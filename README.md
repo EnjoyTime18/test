@@ -130,7 +130,7 @@ Name|GitHub Address|
 > * Board Entity가 삭제될 때 연결된 모든 Reply Entity도 함께 삭제되게 변경
 > * @OneToMany(mappedBy = "board", cascade = CascadeType.REMOVE) Board가 삭제될 때 연관된 Reply가 삭제되는 것 -> Board Entity가 삭제될 때 연관된 모든 Reply Entity도 삭제
 
- <br><br>
+ <br>
 
 > :rotating_light: 댓글 등록 시 작성일 null 표시 문제점 발생 <br>
 >  Entity 클래스의 builder 메소드에서 시간 설정이 수동으로 이루어지고 있었음. 이로 인해, @CreationTimestamp <br>  어노테이션이 제대로 작동하지 않아 생성 시간이 null로 처리되고 있었음.
