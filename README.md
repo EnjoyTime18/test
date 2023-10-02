@@ -126,53 +126,18 @@ Name|GitHub Address|
 <br><br>
 
 ## :face_with_head_bandage: Trouble Shooting
-:page_facing_up: 메인 페이지<br><br>
-> :rotating_light: 메인 페이지에서 스크롤 시 크롬 웹 브라우저 관리자 도구에서 네트워크 탭에 이미지 로고 파일이 스크롤 시 마다 이미지가 로드 되는 문제 발생 -> 스크롤 시 렉 유발 발                   생
-> * 메인 페이지에서 스크롤 시 자바 스크립트 단에 스크롤 이벤트 함수가 발생되어 적용되어 있는데 그 함수에 스크롤 시 마다 로고 이미지 파일이 로드 되는 코드를 발견하여 해당 코드 삭제     하여 문제 해결
+> :rotating_light: Reply Entity에 CascadeType.REMOVE가 적용되어 있기 때문에 Reply를 삭제할 때 연관된 Board가 삭제되려고 하는 문제점 발생 <br>
+>  @ManyToOne(targetEntity = Board.class, cascade = CascadeType.REMOVE) 
+> * Board Entity가 삭제될 때 연결된 모든 Reply Entity도 함께 삭제되게 변경
+> * @OneToMany(mappedBy = "board", cascade = CascadeType.REMOVE) Board가 삭제될 때 연관된 Reply가 삭제되는 것 -> Board Entity가 삭제될 때 연관된 모든 Reply Entity도 삭제
 
- <br><br>:world_map: 검색방법 : 지도<br><br>
- 
-> :rotating_light:이미지 카테고리에 onclick속성을 이용해 해당 지역 위도와 경도값을 map.html로 넘겨 주는 스크립트 함수를 구현해 위도와 경도 값을 포함하는url을 구성  → url encoding 문제에 봉착.
-> * 기존 위도와 경도 값을 사용하는 코드 폐기, Thymeleaf 반복문으로 프로젝트 내부의 지역 사진을 가져오고 있는 코드를 수정하는 방향 선정.
-> * -> 사진을 가져오는 반복문에서, 지역의 pk를 파라미터로 받는 새로운 컨트롤러를 호출해 해당 지역의 데이터와 해당 지역을 조건으로 호텔과 호텔 이미지의 데이터를 담고 있는 DTO 두가지를 model로 전달한다.
+ <br><br>
 
-> :rotating_light: Script 내부에서 Thymeleaf 표현식을 사용 못함.
-> * Thymeleaf는 서버 측에서 HTML 템플릿을 생성하는 데 사용.
-> * 주석(/**/)을 사용하거나, script를 감싸는 태그에 **th:attr** 속성을 사용해 할당된 변수를 사용한다.
+> :rotating_light: 댓글 등록 시 작성일 null 표시 문제점 발생 <br>
+>  Entity 클래스의 builder 메소드에서 시간 설정이 수동으로 이루어지고 있었음. 이로 인해, @CreationTimestamp 어노테이션이 제대로 <br>  작동하지 않아 생성 시간이 null로 처리되고 있었음.
+> * Entity 클래스에서 시간 필드 설정 제거: Entity 클래스의 builder 메소드에서 시간 필드에 대한 설정을 제거하여, Hibernate가 @CreationTimestamp 어노테이션을 통해 시간을 자동으로 관리할 수 있도록 함.
+> * DTO에서 시간 필드 세팅: Entity에서 DTO로 데이터 변환 시, Entity에 저장된 시간 필드를 DTO의 시간 필드에 세팅함. 이로써, 클라이언트 측으로 정확한 시간 정보가 전달됨.
+> * DTO 는 Entity 로부터 세팅 된거 가져 오는 용도 : Entity는 시간 값 1번만 세팅 해야 되기 떄문임. @CreationTimestamp 와 @UpdateTimestamp의 값들은 1번만 세팅되고 1번 만 실행 됨. 그래서 builder에서 시간 값을 또 세팅 시 null값 으로 세팅 됨.
 
-> :rotating_light:마커를 찍기위해 호텔의 위경도 값을 가져와야하며, 해당 지역을 클릭하면 그 지역에 관련된 호텔만 불러와야한다. 
-> * 지역을 조건으로 해당 호텔만 추출하도록 쿼리 작성.
-> * 호텔 entity에 @Embedded로 선언된 필드에있는 위경도 값을 사용한다.
-> * 가져온 hotel객체에서 대부분의 정보를 사용할 수 있다.
-
-> :rotating_light:마커 클릭으로 출력되는 인포윈도우에 담을 정보 중에, 사진은 첫번째 사진 한장만 나오게 변경해야한다. 
-> * 조건에 맞는 쿼리문을 작성.
-> * -> 해당 지역의 호텔 사진 중 첫번째 사진은 마지막이름이 1번이다. like연산자를 통해 첫번째 이미지만 불러온다.
-
-
-<br><br>:mag_right: 검색방법 : 조건 검색<br><br>
->  :dart: 메인페이지 조건 검색시 해당 조건에 맞게 입력값 반환을 원하는 상황  →  null pointer Exception, Syntax Error발생
-> *  @param어노테이션의 이름과 변수명이 일치하지 않는 경우 오류 발생. 동일하게 수정 후 해결 <br>
-> *  Syntax Error 이 부분도 쿼리문에서 사용되는 테이블 및 칼럼 이름 확인하고 데이터베이스에서 정의된 이름과 동일하게 수정 후 해결<br>
-
-
- <br><br>:necktie: 관리자 : 통계차트<br><br>
- > :rotating_light: 원형 차트 : 넘어 오는 데이터는 의도한 대로 넘어 왔지만, script에서 값이 없어 차트가 보이지 않는 상황. (List<Object[]>형식으로 넘어가며, script는 JSON.parse() 로  변환.)
- > * JSON 문자열을 파싱해 주고 있었지만, 직렬화하지 않았음.
- > * 내부 객체&데이터를 외부의 시스템에서도 사용할 수 있게 바이트 형태로 직렬화&역직렬화.
-
- > :rotating_light: 열 차트 : 행차트를 구현하려 했지만, 템플릿과 맞지 않는 문제가 발생.
- > * 열 차트 구현으로 노선 변경. but 호텔 이름이 길어 겹치는 문제발생.
- > * 호텔이름 겹치는 문제는 크기를 키우고, 잘리는 문제는 상위 5로 조정.
-
- <br><br>:pinching_hand: URL에 허용되지 않는 값 오류처리
- > * url 데이터 누락 -> 파라미터 없음 & 파라미터에 값 없음.
- > * 날짜 임의 작성 -> 잘못된 날짜 데이터.
- > * 위의 두가지의 경우의 수를 잡아, alert 메세지와 바로 뒤로가는 동작을하는 페이지로 이동.
- > * 잘못된 컨트롤러 요청 -> error/404
- 
- <br><br>:moneybag: 결제<br><br>
- > :rotating_light: 호텔 상세보기 페이지단에 방 리스트 탭 및 결제 페이지에서 1박 가격 값이 천(1000) 단위마다 콤마가 적용 안되서 숫자 데이터 가독성 문제점 발생 
- > * Thymeleaf 문법 함수 #numbers.formatInteger 적용해서 문제점 해결 <br><br>
-
+<br><br>
 [:gear: 주요 기능](#gear-주요-기능)
