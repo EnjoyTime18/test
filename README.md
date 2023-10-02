@@ -126,7 +126,7 @@ Name|GitHub Address|
 <br><br>
 
 ## :face_with_head_bandage: Trouble Shooting
-> :rotating_light: Reply Entity에 CascadeType.REMOVE가 적용되어 있기 때문에 Reply를 삭제할 때 연관된 Board가 삭제되려고 하는 문제점 발생 <br>
+> :rotating_light: Reply Entity에 CascadeType.REMOVE가 적용되어 있기 때문에 Reply를 삭제할 때 연관된 Board가 삭제되려고 <br>  하는 문제점 발생 <br>
 >  @ManyToOne(targetEntity = Board.class, cascade = CascadeType.REMOVE) 
 > * Board Entity가 삭제될 때 연결된 모든 Reply Entity도 함께 삭제되게 변경
 > * @OneToMany(mappedBy = "board", cascade = CascadeType.REMOVE) Board가 삭제될 때 연관된 Reply가 삭제되는 것 -> Board Entity가 삭제될 때 연관된 모든 Reply Entity도 삭제
